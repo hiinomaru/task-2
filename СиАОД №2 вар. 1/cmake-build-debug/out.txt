@@ -1,0 +1,12 @@
+12675     Starikov Igor Albertovich     11 Parkovaya St. 36
+96649     Oliver Rodriguez     Main Str. 79
+31421     Amelia Moore     Maple Str. 123
+77793     Henry Miller     Pine Str. 174
+56915     Sophia Wilson     View Str. 22
+69383     Oliver Miller     Second Str. 97
+40886     Elijah Williams     Hill Str. 188
+12345     Starikov Igor Albertovich     11 Parkovaya St. 36
+52777     Noah Moore     Lake Str. 113
+75386     Emma Williams     Eighth Str. 172
+78335     Noah Anderson     First Str. 109
+70492     Liam Williams     Cedar Str. 71

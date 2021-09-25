@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/igorstarikov/CLionProjects/СиАОД №2 вар. 1/main.cpp
+iostream
+-
+vector
+-
+string
+-
+fstream
+-
+chrono
+-
+
