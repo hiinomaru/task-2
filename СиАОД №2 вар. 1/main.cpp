@@ -34,7 +34,6 @@ public:
             SurName[rand() % 20] + "@" + Street[rand() % 20] + " Str. " + to_string(rand() % 200 + 1) + "\n";
         }
     }
-
 };
 
 class HashTable{
@@ -73,7 +72,6 @@ public:
 
     void push(Node* N){ // insert Node in the table
         int hash = this->hash(*N);
-        cout << hash;
         int first_hash = hash - 1; // we'll need it to check if there's a loop
         while((!table[hash]->isOpen) && (first_hash != hash))
             hash = (hash + 1) % size;
@@ -88,6 +86,7 @@ public:
     void pop(int ISBN) { // takes Node, delete Node from the table
         Node* N1 = new Node{0, "", "", true, true};
         this->table[this->find(ISBN)] = N1;
+        amount--;
     }
 
     const int hash(Node N){ // takes Node, returns hash number
@@ -164,6 +163,10 @@ public:
         in.close(); //close filestream
     }
 
+    Node* getNode(long N){
+        return this->table[N];
+    }
+
     void toFile(){ // file output
         ofstream out;
         out.open("/Users/igorstarikov/CLionProjects/СиАОД №2 вар. 1/cmake-build-debug/out.txt"); // open file stream
@@ -188,31 +191,32 @@ int main() { // just remove /* ... */
     /*long ISBN = 12345;
     cout << "ISBN = " << ISBN << "\n" << "hash = " << Table->hash(ISBN);*/
     //2 read from file and push in the table
-    /*ListGenerator G0;
+    ListGenerator G0;
     G0.Gen(300);
     cout << Table->Info();
     Table->fill(0);
     Table->print();
-    cout << Table->Info();*/
+    cout << Table->Info();
     //3 pop from table and file
-    ListGenerator G1;
+    /*ListGenerator G1;
     G1.Gen(10);
     Table->fill(0);
     cout << "before\n";
     Table->print();
     cout << Table->Info();
-    Table->pop(18101);
+    Table->pop(33031);
     cout << "after\n";
     Table->print();
-    cout << Table->Info();
+    cout << Table->Info();*/
     //4 find using hashtable
     /*ListGenerator G2;
     G2.Gen(10);
     Table->fill(0);
     Table->print();
     cout << Table->Info();
-    Node* N = Table->find(18101);
-    cout << "Found a node: " << N->ISBN << "  " << N->full_name << "  " << N->adress;*/
+    long N = Table->find(23136);
+    cout << "Found a node: " << Table->getNode(N)->ISBN << "  " << Table->getNode(N)->full_name
+    << "  " << Table->getNode(N)->adress;*/
     //5 do rehash
     /*ListGenerator G3;
     G3.Gen(10);
